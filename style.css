@@ -1,0 +1,28 @@
+:root {
+  --blue-900: #0b3a66;
+  --blue-600: #1376d6;
+  --blue-400: #5db0ff;
+  --white: #ffffff;
+  --muted: #6b7280;
+  --card-shadow: 0 8px 24px rgba(11,58,102,0.12);
+}
+
+body { font-family: Inter, sans-serif; background: #f8fbff; margin: 0; color: var(--blue-900); }
+header, footer { display: flex; justify-content: space-between; align-items: center; padding: 20px 36px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 56px; height: 56px; }
+nav a { text-decoration: none; margin-left: 18px; color: var(--blue-900); font-weight: 600; }
+.container { max-width: 1180px; margin: auto; padding: 40px 20px; }
+.hero { display: grid; grid-template-columns: 1fr 480px; gap: 40px; align-items: center; }
+.btn { padding: 12px 18px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+.btn-primary { background: var(--blue-600); color: var(--white); border: none; }
+.btn-outline { background: transparent; border: 2px solid rgba(11,58,102,0.08); color: var(--blue-900); }
+.mascot-card { background: var(--white); border-radius: 12px; box-shadow: var(--card-shadow); display: flex; justify-content: center; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+.feature { background: var(--white); padding: 18px; border-radius: 12px; box-shadow: var(--card-shadow); }
+.score-card { display: flex; gap: 20px; align-items: center; background: linear-gradient(90deg, var(--blue-600), var(--blue-400)); color: white; padding: 22px; border-radius: 12px; margin-top: 20px; }
+.score-value { font-size: 48px; font-weight: 800; }
+.contact { display: grid; grid-template-columns: 1fr 420px; gap: 24px; margin-top: 36px; }
+form { background: var(--white); padding: 18px; border-radius: 12px; box-shadow: var(--card-shadow); }
+form input, form textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #e6eefc; }
+form button { margin-top: 12px; }
