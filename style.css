@@ -10,7 +10,7 @@
 body { font-family: Inter, sans-serif; background: #f8fbff; margin: 0; color: var(--blue-900); }
 header, footer { display: flex; justify-content: space-between; align-items: center; padding: 20px 36px; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand img { width: 56px; height: 56px; }
+.brand img { height: 56px; }
 nav a { text-decoration: none; margin-left: 18px; color: var(--blue-900); font-weight: 600; }
 .container { max-width: 1180px; margin: auto; padding: 40px 20px; }
 .hero { display: grid; grid-template-columns: 1fr 480px; gap: 40px; align-items: center; }
