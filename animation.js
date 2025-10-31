@@ -1,15 +1,26 @@
-function demoScore() {
-  const score = Math.floor(Math.random() * 51) + 50;
-  const el = document.getElementById('demo-score');
-  el.textContent = score;
-  el.style.transition = 'transform 0.3s ease';
-  el.style.transform = 'scale(1.3)';
-  setTimeout(() => el.style.transform = 'scale(1)', 300);
-}
+  const carousel = document.getElementById('carousel');
+  const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
 
-function scrollToContact() {
-  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-}
+  // défilement avec les flèches
+  next.addEventListener('click', () => {
+    carousel.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+
+  prev.addEventListener('click', () => {
+    carousel.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  // défilement automatique (toutes les 4 secondes)
+  setInterval(() => {
+    carousel.scrollBy({ left: 320, behavior: 'smooth' });
+    // revient au début si fin atteinte
+    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+  }, 4000);
+
+
 
 function submitForm(event) {
   event.preventDefault();

@@ -28,15 +28,15 @@
         <p>Audit automatisé et rapports clairs pour mesurer la sécurité, la confidentialité et la résilience de vos services web.</p>
 
         <div class="cta">
-          <button class="btn btn-primary" onclick="demoScore()">Voir un exemple de cyberscore</button>
-          <button class="btn btn-outline" onclick="scrollToContact()">Nous contacter</button>
+          <input id="calcyberscore" name="btn btn-primary" placeholder="Entrez le lien de votre site WEB" required>
+          <a class="btn btn-primary" href="#calcyberscore">Calculer votre cyberscore</a>
         </div>
 
         <div class="score-card">
-          <div class="score-value" id="demo-score">—</div>
+          <!-- <div class="score-value" id="demo-score">—</div>
           <div class="score-meta">
             <div>Cyberscore global</div>
-            <small>Basé sur sécurité, confidentialité, performances</small>
+            <small>Basé sur sécurité, confidentialité, performances</small> -->
           </div>
         </div>
       </div>
@@ -46,10 +46,16 @@
       </div>
     </section>
 
-    <section id="services" class="features">
+    <section id="services" class="features-container">
+  <h2>Nos Partenaires</h2>
+
+  <div class="features-wrapper">
+    <button class="arrow left" id="prev">&#10094;</button>
+
+    <div class="features" id="carousel">
       <div class="feature">
-        <h3>Audit automatisé</h3>
-        <p>Scan complet (OWASP, headers, certs) pour détecter vulnérabilités et mauvaises configurations.</p>
+        <h3>Wikipédia</h3>
+        <p>Nous assurons l'évaluation de sécurité de chacunes des modifications apportées par un utilisateur ou modérateur sur Wikipédia</p>
       </div>
       <div class="feature">
         <h3>Notation transparente</h3>
@@ -59,26 +65,70 @@
         <h3>Rapports exportables</h3>
         <p>PDFs et API pour intégrer les résultats dans vos outils de conformité.</p>
       </div>
-    </section>
+      <div class="feature">
+        <h3>Surveillance continue</h3>
+        <p>Suivi automatisé de la sécurité et alertes en cas de nouvelle faille détectée.</p>
+      </div>
+      <div class="feature">
+        <h3>Surveillance continue</h3>
+        <p>Suivi automatisé de la sécurité et alertes en cas de nouvelle faille détectée.</p>
+      </div>
+      <div class="feature">
+        <h3>Surveillance continue</h3>
+        <p>Suivi automatisé de la sécurité et alertes en cas de nouvelle faille détectée.</p>
+      </div>
+      <div class="feature">
+        <h3>Surveillance continue</h3>
+        <p>Suivi automatisé de la sécurité et alertes en cas de nouvelle faille détectée.</p>
+      </div>
+      <div class="feature">
+        <h3>Surveillance continue</h3>
+        <p>Suivi automatisé de la sécurité et alertes en cas de nouvelle faille détectée.</p>
+      </div>
+      <div class="feature">
+        <h3>Surveillance continue</h3>
+        <p>Suivi automatisé de la sécurité et alertes en cas de nouvelle faille détectée.</p>
+      </div>
+      <div class="feature">
+        <h3>Surveillance continue</h3>
+        <p>Suivi automatisé de la sécurité et alertes en cas de nouvelle faille détectée.</p>
+      </div>
+    </div>
+
+    <button class="arrow right" id="next">&#10095;</button>
+  </div>
+</section>
+
 
     <section id="score" class="score-example">
       <div class="score-detail">
         <h3>Score par catégorie</h3>
         <ul>
-          <li>Sécurité des communications (TLS) — 82/100</li>
-          <li>Headers de sécurité — 74/100</li>
-          <li>Exposition publique & best-practices — 88/100</li>
-          <li>Vie privée & cookies — 69/100</li>
+          <li>1. Vérifications liées au lien (URL)</li>
+          <ul>
+            <li>a. Le protocole HTTPS</li>
+            <li>b. Le nom de domaine</li>
+            <li>c. L’extension du domaine</li>
+            <li>d. Absence de caractères étranges</li>
+          </ul>
+          <li>2. Vérifications visuelles du site</li>
+          <ul>
+            <li>a. Apparence professionnelle</li>
+            <li>b. Mentions légales et contact</li>
+            <li>c. Présence du cadenas dans la barre d’adresse</li>
+            <li>d. Aucune pop-up ou demande de données immédiate</li>
+            <li>e. Publicités excessives ou redirections</li>
+          </ul>
         </ul>
       </div>
-      <div class="score-reco">
+      <!-- <div class="score-reco">
         <h3>Recommandations prioritaires</h3>
         <ol>
           <li>Activer HSTS et pré-charger</li>
           <li>Corriger X-Frame-Options et Content-Security-Policy</li>
           <li>Réviser les cookies sensibles et durées</li>
         </ol>
-      </div>
+      </div> -->
     </section>
 
     <section id="contact" class="contact">
@@ -87,7 +137,7 @@
         <p>Demandez une démo, un audit ou une offre personnalisée.</p>
       </div>
 
-      <form onsubmit="submitForm(event)">
+      <form id='form_contact' onsubmit="submitForm(event)">
         <label for="name">Nom</label>
         <input id="name" name="name" placeholder="Votre nom" required>
 
@@ -100,10 +150,11 @@
         <button class="btn btn-primary" type="submit">Envoyer</button>
       </form>
     </section>
+
   </main>
 
   <footer>
-    <p>© 2025 ShieldGuard. Tous droits réservés.</p>
+    <p>© 2025 CyberMetrics. Tous droits réservés.</p>
   </footer>
 
   <script src="animation.js"></script>
