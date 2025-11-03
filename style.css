@@ -56,7 +56,7 @@ nav a:hover {
   background: linear-gradient(90deg, var(--blue-400), var(--blue-200));
   grid-template-columns: 1fr 480px; 
   border-radius: 10px; 
-  max-height: 500px;
+  max-height: 550px;
   gap: 40px; 
   align-items: center; }
   
@@ -167,9 +167,18 @@ padding-left: 30px;}
 .arrow.right {
   right: -20px;
 }
-s
+/* #result {
+      background: white;
+      border-radius: 10px;
+      margin: 25px 0;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }*/
+#result ul {
+  padding-left: 20px;
+} 
 
-/*.score-card { 
+.score-card { 
   display: flex; 
   gap: 20px; 
   align-items: center; 
@@ -177,11 +186,29 @@ s
   color: white; 
   padding: 22px; 
   border-radius: 12px; 
-  margin-top: 20px; }
+  margin-top: 30px;
+margin-bottom: 20px;
+width: 95%; }
 
 .score-value { 
-  font-size: 48px; 
-  font-weight: 800; }*/
+  font-size: 20px; 
+  font-weight: 300; }
+
+.progress-bar-container {
+  width: 100%;
+  background: #e9ecef;
+  border-radius: 10px;
+  margin: 25px 0;
+  height: 20px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ff4e42, #f7b500, #28a745);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
 
 .contact { 
   margin-top: 36px; }
